@@ -40,3 +40,8 @@ footer{
     background-color: aquamarine;
 }
 
+#Greeting{
+    color: blue;
+    font-size: 26px;
+    font-weight: bold;
+}
