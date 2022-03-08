@@ -22,11 +22,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
     
   return (
-    <>
+    <div>
         <h1>CONTADOR: {estado}</h1>
         <button onClick={handleRestar}>-</button> <button onClick={handleSumar}>+</button>
         <div><button onClick={agregarCarrito}>Agregar al carrito</button></div>
-    </>
+    </div>
   )
 }
 
