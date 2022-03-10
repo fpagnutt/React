@@ -20,6 +20,18 @@ let productosIniciales = [
     nombre: "Producto3",
     precio: 20,
     stock: 14   
+  },
+  {
+    id:4,
+    nombre: "Producto4",
+    precio: 22,
+    stock: 6   
+  },
+  {
+    id:5,
+    nombre: "Producto5",
+    precio: 14,
+    stock: 14   
   }
 ]
 

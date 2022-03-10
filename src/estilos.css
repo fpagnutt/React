@@ -43,8 +43,12 @@ footer{
 }
 
 .cont{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 30px 30px;
+}
+
+#probando{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
