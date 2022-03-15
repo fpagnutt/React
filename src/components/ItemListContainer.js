@@ -61,11 +61,12 @@ const ItemListContainer = () => {
 
   
   if(loading){
-    return <h1>Cargando los productos... Aguarde</h1>
+    return <h1 id="main">Cargando los productos... Aguarde</h1>
   }else{
     return (
-      <div>          
-          <ItemList productos={productos}/>
+      <div id="main">
+        <h2>Bienvenidx</h2>          
+        <ItemList productos={productos}/>
       </div>
       )
   }

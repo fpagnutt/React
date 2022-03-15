@@ -1,6 +1,7 @@
 import NavBar from './components/NavBar'
 import Footer from './Footer'
-import Main from './Main'
+import ItemListContainer from './components/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer'
 
 
 
@@ -9,7 +10,8 @@ const App = () => {
   return (
     <>
       <NavBar/>
-      <Main/>
+      <ItemListContainer/>
+      <ItemDetailContainer/>
       <Footer/>
     </>
   );

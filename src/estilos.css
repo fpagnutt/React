@@ -3,18 +3,16 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-/*
 html, body, #root{
     height: 100vh;
-}*/
-
+}
 header{
     display: flex;
     align-items: center;
     box-shadow: 0 2px 4px;
     height: 50px;
     background-color: aquamarine;
+    padding-left: 20px;
            
 }
 
@@ -25,13 +23,8 @@ header{
     
 }
 
-/*#root{
-    display: flex;
-    flex-direction: column;
-}*/
-
-main{
-    min-height: 100vh;
+#main{
+    height: 100vh;
     text-align: center;
     padding-top: 60px;
     
