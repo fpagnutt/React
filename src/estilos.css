@@ -3,10 +3,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 html, body, #root{
     height: 100vh;
     font-family: 'Rajdhani', sans-serif;
+    
+    
   
 }
 header{
@@ -39,11 +42,14 @@ header{
     background-color: rgb(244, 247, 243);
     
     
+    
+    
 }
 
 footer{
     text-align: center;
-    background-color: rgb(175, 235, 168);
+    background-color: rgb(244, 247, 243);
+    
         
 }
 
@@ -73,7 +79,6 @@ article:hover{
     height: 200px;
     width: 100%;
     
-    
 }
 
 .titleItem{
@@ -97,5 +102,21 @@ article:hover{
     text-decoration: none;
     padding-left: 700px;
 }
+
+.imageItemDetail{
+    width: 20%;
+    height: 500px;
+   
+}
+
+.paddingTop{
+    padding-top: 20px;
+}
+
+
+
+
+
+
 
 

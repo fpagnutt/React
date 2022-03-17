@@ -18,12 +18,20 @@ const ItemListContainer = () => {
       toast.dismiss()
       return response.json()
     })
-    .then((respuesta)=>{
+    /*.then((respuesta)=>{
       const catalogoId = categoryId ? respuesta.filter((item) => item.category === categoryId) : respuesta
       setProductos(catalogoId)
       console.log(respuesta)  
             
-    })
+    })*/
+    .then((respuesta)=>{
+      if(categoryId){
+         const filtered = respuesta.filter(item => item.category === categoryId)
+         setProductos(filtered)
+      }else{
+         setProductos(respuesta)
+      }
+    }) 
         
     .catch((error) => {
       toast.error("Los productos no pudieron cargarse correctamente")
