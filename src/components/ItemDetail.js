@@ -1,14 +1,19 @@
+import ItemCount from "./ItemCount"
+import Rate from "rc-rate"
+import 'rc-rate/assets/index.css';
+import Item from "./Item";
+
 const ItemDetail = ({producto}) => {
     return (
-        <div key={producto.id} className="cont">
-            <img src="https://picsum.photos/200/300"></img>
-            <h3>{producto.nombre}</h3>
-            <div>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Accusamus, rem deleniti maiores, ut aspernatur accusantium ex placeat at autem, explicabo eos nisi atque in. Necessitatibus illo cum cumque aut perspiciatis.</div>
-            <div>Precio: ${producto.precio}</div>
-            <h4>Aprovecha las ultimas {producto.stock} unidades</h4>
-            
-        </div>
-            
+        <article key={producto.id} className="cont">
+          <img  className="imageItem" src={producto.image}></img>
+          <div className="titleItem">{producto.title}</div>
+          <div>Precio: ${producto.price}</div>
+          <div>Stock: {producto.rating.count}</div>
+          <ItemCount stock={producto.rating.count} initial={1} onAdd={()=>{}}/>
+          <Rate count={5} value={producto.rating.rate}/>
+        </article>
+                  
     )
   }
 export default ItemDetail

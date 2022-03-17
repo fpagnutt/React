@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer>&copy; FP - DERECHOS RESERVADOS</footer>
+    <footer><span className="paddingTop">&copy; FP - DERECHOS RESERVADOS</span></footer>
   )
 }
 
