@@ -14,8 +14,6 @@ const ItemDetail = ({producto}) => {
     setCantidad(cantidadSeleccionada)
     
   }
-
-  
     return (
       <div key={producto.id} id="main">
         <img  className="imageItemDetail" src={producto.image}></img>
@@ -25,7 +23,7 @@ const ItemDetail = ({producto}) => {
         <div className="paddingTop"><h4>Precio: ${producto.price}</h4></div>
         <div>Stock: {producto.rating.count}</div>
         <div className="paddingTop"></div>
-        <ItemCount stock={producto.rating.count} initial={1} onAdd={onAdd} cantidad={cantidad}/>
+        {cantidad === 0 && <ItemCount stock={producto.rating.count} initial={1} onAdd={onAdd}/>}
         <NavLink to="/carrito">Terminar compra</NavLink>
       </div>
                   
