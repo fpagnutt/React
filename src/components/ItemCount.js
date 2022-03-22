@@ -1,33 +1,43 @@
 import { useState } from "react"
 
 
-const ItemCount = ({stock, initial, onAdd}) => {
+const ItemCount = ({stock, initial, onAdd, cantidad}) => {
     
-    const [estado, setEstado] = useState(initial)
+    const [contador, setContador] = useState(initial)
     const handleRestar = () =>{
-      if(estado > initial){
-        setEstado(estado - 1)
+      if(contador > initial){
+        setContador(contador - 1)
       }
     }
     const handleSumar = () => {
-      if(estado < stock){
-        setEstado(estado + 1)
+      if(contador < stock){
+        setContador(contador + 1)
       }
     }
     const agregarCarrito = () =>{
-        if(estado <= stock){
-            onAdd(estado)
+        if(contador <= stock){
+            onAdd(contador)
         }     
     }
 
-    
-  return (
-    <div>
-        <h4>CONTADOR: {estado}</h4>
-        <button onClick={handleRestar}>-</button> <button onClick={handleSumar}>+</button>
-        <div><button onClick={agregarCarrito}>Agregar al carrito</button></div>
-    </div>
-  )
+    if(cantidad === 0){
+      return (
+        <div>
+            <h4>CONTADOR: {contador}</h4>
+            <button onClick={handleRestar}>-</button> <button onClick={handleSumar}>+</button>
+            <div><button onClick={agregarCarrito}>Agregar al carrito</button></div>
+        </div>
+      )
+    }else{
+      return (
+        <div className="noMuestra">
+            <h4>CONTADOR: {contador}</h4>
+            <button onClick={handleRestar}>-</button> <button onClick={handleSumar}>+</button>
+            <div><button onClick={agregarCarrito}>Agregar al carrito</button></div>
+        </div>
+      )
+    }
+  
 }
 
 export default ItemCount

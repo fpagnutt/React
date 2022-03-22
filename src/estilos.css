@@ -31,7 +31,7 @@ header{
     text-align: end;
     width: 100%;
     padding-right: 40px;
-    font-size: 20px;
+    font-size: 15px;
                 
 }
 
@@ -40,10 +40,7 @@ header{
     text-align: center;
     padding: 60px 0px;
     background-color: rgb(244, 247, 243);
-    
-    
-    
-    
+        
 }
 
 footer{
@@ -100,12 +97,12 @@ article:hover{
 
 .shopCart{
     text-decoration: none;
-    padding-left: 700px;
+    padding-left: 500px;
 }
 
 .imageItemDetail{
     width: 20%;
-    height: 500px;
+    height: 300px;
    
 }
 
@@ -113,6 +110,9 @@ article:hover{
     padding-top: 20px;
 }
 
+.noMuestra{
+    display: none;
+}
 
 
 
