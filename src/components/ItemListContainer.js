@@ -21,7 +21,7 @@ const ItemListContainer = () => {
     .then((respuesta)=>{
       const catalogoId = categoryId ? respuesta.filter((item) => item.category === categoryId) : respuesta
       setProductos(catalogoId)
-      console.log(respuesta)  
+       
             
     })
     .catch((error) => {

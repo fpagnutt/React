@@ -4,18 +4,21 @@ import Main from './Main'
 import {ToastContainer} from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter } from 'react-router-dom';
-
+import MiProvider from './context/CartContext';
 
 const App = () => {
 
   return (
-    <BrowserRouter>
-        <Header/>
-        <Main/>
+    
+      <BrowserRouter>
+        <MiProvider>
+          <Header/>
+          <Main/>
+        </MiProvider>
         <Footer/>
         <ToastContainer/>
-    </BrowserRouter>
-   
+      </BrowserRouter>
+      
   );
   
 }
