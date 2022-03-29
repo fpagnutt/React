@@ -37,7 +37,7 @@ const MiProvider = ({children}) => {
 
     const removeItem = (producto)=>{
         const copia = carrito.slice(0)
-        copia.filter((item) => item.id === producto.id)
+        setCarrito(copia.filter((item) => item.id !== producto.id))
 
     }
     
@@ -68,7 +68,7 @@ const MiProvider = ({children}) => {
             addItem: addItem,
             calcCantidad: calcCantidad,
             calcTotal: calcTotal,
-            clear: clear
+            removeItem: removeItem
             
         }
 

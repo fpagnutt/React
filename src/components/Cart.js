@@ -4,7 +4,7 @@ import { contexto } from "../context/CartContext"
 
 const Cart = () => {
   
-  const {carrito, calcTotal} = useContext(contexto)
+  const {carrito, calcTotal, removeItem} = useContext(contexto)
   
 
   console.log(carrito)
@@ -19,7 +19,7 @@ const Cart = () => {
                   <div className="titleItem">{cart.title}</div>
                   <div>Precio: ${cart.price}</div>
                   <h3>Cantidad: {cart.cantidad}</h3>
-                  <button>ELIMINAR</button>
+                  <button onClick={removeItem}>ELIMINAR</button>
                 </article>  
                )
         })}
