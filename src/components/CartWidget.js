@@ -4,7 +4,7 @@ import { useContext } from "react"
 
 
 const CartWidget = () => {
-  const {calcCantidad} = useContext(contexto)
+  const {calcCantidad, carrito} = useContext(contexto)
   
   return (
     <>

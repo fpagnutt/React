@@ -2,7 +2,7 @@ import { createContext } from "react";
 import { useState } from "react";
 export const contexto = createContext()
 
-const {Provider, Consumer} = contexto
+const {Provider} = contexto
 
 
 const MiProvider = ({children}) => {
@@ -35,19 +35,17 @@ const MiProvider = ({children}) => {
         return carrito.some(item => item.id === id);
     }
 
-    const removeItem = (producto)=>{
-        const copia = carrito.slice(0)
-        setCarrito(copia.filter((item) => item.id !== producto.id))
-
+    const removeItem = (id)=>{
+        setCarrito(carrito.filter(item => item.id !== id))        
+           
     }
     
-
-    const clear = ()=>{
+    const vaciar = ()=>{
+        
         setCarrito([])
         setCantidad(0)
-    }
-    
-   
+    } 
+
     const calcCantidad = ()=> {
         let cantidad = 0
         carrito.forEach(item => cantidad += item.cantidad)
@@ -68,7 +66,8 @@ const MiProvider = ({children}) => {
             addItem: addItem,
             calcCantidad: calcCantidad,
             calcTotal: calcTotal,
-            removeItem: removeItem
+            removeItem: removeItem,
+            vaciar: vaciar
             
         }
 

@@ -34,16 +34,12 @@ const ItemListContainer = () => {
   },[categoryId])
 
     
-
-  if(loading){
-    return <h1 id="main">Cargando los productos... Aguarde</h1>
-  }else{
-    return (
-      <div id="main">
-        <ItemList productos={productos}/>
-      </div>
-      )
-    }
+  return(
+    <>
+     { loading ? <h1 id="main">Cargando los productos... Aguarde</h1> : <div id="main"><ItemList productos={productos}/></div> }
+     </>
+   )
+  
   }
  
 

@@ -117,7 +117,8 @@ article:hover{
 
 .carritoMain{
     display: flex;
-    flex-direction: row
+    flex-direction: row;
+    
 }
 
 
