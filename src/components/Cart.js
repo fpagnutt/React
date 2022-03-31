@@ -2,11 +2,43 @@ import { useContext } from "react"
 import { contexto } from "../context/CartContext"
 import { Link } from "react-router-dom"
 import { prettyDOM } from "@testing-library/react"
+import {db} from "./firebase"
+import {collection, addDoc, serverTimestamp} from "firebase/firestore"
+import { toast } from "react-toastify"
+
 
 const Cart = () => {
   
   const {carrito, calcTotal, removeItem, vaciar} = useContext(contexto)
   
+  const finalizar = () => {
+    const orden = {
+      buyer:{
+        nombre: "Francisco",
+        telefono: "123456789",
+        email: "a@a.com"
+        },
+      items: carrito,
+      date: serverTimestamp(),
+      total: calcTotal()
+    }
+
+    const ordenesCollection = collection(db, "orders")
+    const pedido = addDoc(ordenesCollection, orden)
+
+    pedido
+    .then((resultado)=>{
+      toast.success("Pedido realizado. Su orden de compra es: " + resultado.id)
+      
+    })
+    .catch(error=>{
+      toast.error("El pedido no pudo ser realizado")
+    })
+
+  }
+
+
+
   if(carrito.length > 0){
     return (
       <div id="main">
@@ -25,6 +57,7 @@ const Cart = () => {
         
         </div> 
         <div className="paddingTop"><h1>TOTAL: $ {calcTotal()}</h1></div> 
+        <button onClick={finalizar}>FINALIZAR COMPRA</button>
         <button onClick={vaciar}>VACIAR CARRO</button>
       </div>
     )

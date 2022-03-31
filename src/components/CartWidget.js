@@ -11,7 +11,7 @@ const CartWidget = () => {
     <Link to="/cart" className="material-icons shopCart">
         shopping_cart 
     </Link>
-    {calcCantidad()}
+    {calcCantidad() == 0 ? <div></div> : <div>{calcCantidad()}</div>}
         
     </>
   )
