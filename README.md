@@ -20,7 +20,9 @@ Encontra los mejores productos de skate.
         npm start
 
      
-[Se puede visualizar mediante el link] (https://lovely-cucurucho-d6daa6.netlify.app/) 
+[Se puede visualizar el sitio mediante el link] (https://beamish-pasca-063ac4.netlify.app/)
+
+
     
 
 
