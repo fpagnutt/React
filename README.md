@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+[![Netlify Status](https://api.netlify.com/api/v1/badges/96826b26-a250-4579-8af2-7ab833c1009e/deploy-status)](https://app.netlify.com/sites/lovely-cucurucho-d6daa6/deploys)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# LEGO
+## Skateshop
+Encontra los mejores productos de skate.
 
-## Available Scripts
+### Descripcion del proyecto
+    Mi codigo corresponde a un ecommerce relacionado a la venta de articulos de skate.
+    Consta de un inicio donde se presentan todos los productos que comercializamos, un header donde se encuentran la categorias (para filtrar los productos) y un cartIcon que redirecciona al carro de compras, donde se puede: eliminar productos no deseados de forma individual, vaciar el carro por completo o mediante un boton (confirmar compra)finalizar con la seleccion de productos y pasar al pago.
+    Una vez realizado el click en la confirmacion, se presentar un formulario donde solicitamos el nombre y correo electronico del cliente.
+    Estos datos son fundamentales, ya que es donde enviaremos informacion respecto a las formas de pago.
+    Al finalizar, se le brindara el numero de orden de compra.
+    Esto generar en firebase una orden con la informacion de los productos seleccionados, un total por la sumatoria de todos los productos y la informacion que nos brindo el cliente mediante los formularios.
+    Este codigo esta hecho con React.
 
-In the project directory, you can run:
+## Uso / Instalacion
+        git clone https://github.com/fpagnutt/React.git
+        cd React
+        npm install
+        npm start
 
-### `npm start`
+     
+[Se puede visualizar mediante el link] (https://lovely-cucurucho-d6daa6.netlify.app/) 
+    
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Teconologias usadas
 
-### `npm test`
+1. React 17+
+2. React-Router-DOM 6+
+3. Bootstrap v5.1.3 = Para utilizar los botones predeterminados.
+4. Dotenv v16 = Ocultamos los valores de las variables de firebase.
+5. Firebase = Se utilizo firestore para simular una base de datos.
+6. Formik v2.2.9 = Se utilizo para los formularios (validaciones).
+7. rc-rate = Estrellas con puntuacion del producto.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    
+    
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+     

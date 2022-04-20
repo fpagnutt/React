@@ -59,6 +59,8 @@ const MiProvider = ({children}) => {
         return total
     }
 
+
+   
     
     const valorDelContexto = 
         {

@@ -4,14 +4,14 @@ import { useContext } from "react"
 
 
 const CartWidget = () => {
-  const {calcCantidad, carrito} = useContext(contexto)
+  const {calcCantidad} = useContext(contexto)
   
   return (
     <>
     <Link to="/cart" className="material-icons shopCart">
         shopping_cart 
     </Link>
-    {calcCantidad() == 0 ? <div></div> : <div>{calcCantidad()}</div>}
+    {calcCantidad() == 0 ? null : <div className="colorPink">{calcCantidad()}</div>}
         
     </>
   )
